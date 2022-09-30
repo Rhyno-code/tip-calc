@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,900;1,100;1,200;1,400;1,600;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./font awesome/js/all.js"></script>
+    <script src="./tip.js" defer></script>
+</head>
+
+<body>
+    <div class="app">
+        <h1 class="title">My Tip Calculator 🚀 </h1>
+        <div class="container">
+            <div class="bill-section">
+                <div class="bill">
+                    <div class="bill-wrapper">
+                        <h2>Bill</h2>
+                        <h4 class="error-msg">your bill can't be less than $0</h4>
+                    </div>
+                    <div class="bill-amount">
+                        <p>$</p>
+                        <input id="bill-input" type="number" placeholder="0.00" />
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="person-wrapper">
+                        <h2>No of Persons</h2>
+                        <h4 class="error-msg">Can't have a period (.) or value less than 1</h4>
+                    </div>
+                    <div class="persons">
+                        <p><i class="fa fa-user" aria-hidden="true"></i></p>
+                        <input id="people-input" type="number" placeholder="1" onchange="setPersons()" />
+                    </div>
+                </div>
+                <div class="tip-percent">
+                    <div class="tip-wrapper">
+                        <h2>Tip %</h2>
+                        <h4 class="error-msg">Select Tip %</h4>
+                    </div>
+                    <div class="tip-percent-btn">
+                        <button class="tip btn active ">5%</button>
+                        <button class="tip btn ">10%</button>
+                        <button class="tip btn">15%</button>
+                        <button class="tip btn">25%</button>
+                        <input class="custom" id="tip-custom" type="number" placeholder="custom" />
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="tip-section">
+                <div>
+                    <h2>Total Tip</h2>
+                    <p class="result">$ <span class="tip-total">0.00</span></p>
+                </div>
+                <div>
+                    <h2>Tip / Person</h2>
+                    <p class="result">$ <span class="tip-per-person">0.00 </span></p>
+                </div>
+                <div>
+                    <h2>Total Bill</h2>
+                    <p class="result">$ <span class="bill-total">0.00</span></p>
+                </div>
+                <div>
+                    <h2>Bill / Person</h2>
+                    <p class="result">$ <span class="bill-per-person">0.00</span></p>
+                </div>
+                <button class="reset-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
